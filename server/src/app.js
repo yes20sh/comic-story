@@ -1,12 +1,12 @@
-// src/app.js
-
 import express from 'express';
-
-import userRoute from './routes/userRoutes'
-
+import userRoute from './routes/userRoutes.js';
 
 const app = express();
 
-app.use('/api/user', userRoute);      
+// Middleware to parse JSON bodies
+app.use(express.json());
+
+// Mount user routes at /api/users
+app.use('/api/users', userRoute);
 
 export default app;
