@@ -1,9 +1,10 @@
-// routes/comicRoutes.js
+// routes/comicRoute.js
 import express from 'express';
-import { createComic } from '../controllers/comicController.js';
+import { createComic, getAllComics } from '../controllers/comicController.js';
 
 const router = express.Router();
 
-router.post('/generate', createComic);
+router.post('/', createComic);
+router.get('/', getAllComics);
 
 export default router;
