@@ -6,6 +6,6 @@ const app = express();
 app.use(express.json());
 
 // Mount user routes at /api/users
-app.use('/api/users', comicRoute);
+app.use('/api/comic', comicRoute);
 
 export default app;
